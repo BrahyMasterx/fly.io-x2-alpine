@@ -1,0 +1,20 @@
+{
+  "name": "express-hello-world",
+  "version": "1.0.0",
+  "description": "Express Hello World",
+  "main": "app.js",
+  "repository": "https://github.com/",
+  "author": "fs",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "request": "^2.88.2"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

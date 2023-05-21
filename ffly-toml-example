@@ -1,0 +1,42 @@
+app = "x2t"
+primary_region = "atl"
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[env]
+  UUID = "0e059fce-d6c8-4cc2-9e11-9efff358f8b9"
+  ARGO_AUTH = "eyJhIjoiYWQ1NDUwYTgyNTI0M2VhZTE5Y2E0ODI4MWQxNTRiZjIiLCJ0IjoiNzc0YzcxZGMtNmJlMC00YTk0LTg1NWEtMzEzNjgwNzBkYzUyIiwicyI6Ik9HTmlOMlF4WVdZdE16RTROQzAwTmpjNExXSmtZekl0TVRjNU1UQTBZbUU1WTJGbSJ9"
+  ARGO_DOMAIN = "vl2.k-fans.com.ar"
+  SSH_DOMAIN = "vsh2.k-fans.com.ar"
+  WEB_USERNAME = "admin"
+  WEB_PASSWORD = "admin*2023*"
+  
+[[services]]
+  protocol = "tcp"
+  internal_port = 8080
+  force_https = false
+  
+  [[services.tcp_checks]]
+    interval = "15s"
+    timeout = "2s"
+    grace_period = "60s"
+    restart_limit = 0
+
+  
+app = "x2mia"
+primary_region = "mia"
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[http_service]
+  internal_port = 80
+  force_https = false
+
+[[services.tcp_checks]]
+  grace_period = "60s"
+  interval = "15s"
+  restart_limit = 0
+  timeout = "2s"
+
+[env]
+  UUID = "0e059fce-d6c8-4cc2-9e11-9efff358f8b9"
